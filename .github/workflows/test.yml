@@ -27,5 +27,8 @@ jobs:
           python-version: ${{ matrix.python }}
           architecture: 'x86'
 
+      - name: Install Dependencies
+        run: pip install numpy scipy==1.9.1 Cython
+
       - name: Run install
-        run: pip install .
+        run: pip install --verbose --no-build-isolation .
