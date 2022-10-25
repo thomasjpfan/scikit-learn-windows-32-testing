@@ -1,0 +1,20 @@
+name: Test Scikit-learn Windows with 32-bit Python interpreter
+
+jobs:
+  check:
+    name: Check Python 32-bit on Windows
+    runs-on: windows-2019
+    steps:
+      - name: Checkout scikit-learn
+        uses: actions/checkout@v3
+        with:
+          repository: glemaitre/scikit-learn
+          ref: deprecation_win32
+
+      - name: Install Python 32-bit interpreter
+        with:
+          python-version: '3.10'
+          architecture: 'x86'
+
+      - name: Run install
+        run: pip install .
