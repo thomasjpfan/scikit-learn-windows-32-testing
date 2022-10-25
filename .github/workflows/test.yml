@@ -12,8 +12,8 @@ jobs:
       matrix:
         include:
           - python: '3.9'
-          - python: '3.10'
-          - python: '3.11'
+          # - python: '3.10'
+          # - python: '3.11'
     steps:
       - name: Checkout scikit-learn
         uses: actions/checkout@v3
@@ -28,7 +28,7 @@ jobs:
           architecture: 'x86'
 
       - name: Install Dependencies
-        run: pip install numpy scipy==1.9.1 Cython
+        run: pip install numpy scipy Cython
 
       - name: Run install
         run: pip install --verbose --no-build-isolation .
