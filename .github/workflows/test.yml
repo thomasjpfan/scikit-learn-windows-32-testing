@@ -1,5 +1,7 @@
 name: Test Scikit-learn Windows with 32-bit Python interpreter
 
+on: push
+
 jobs:
   check:
     name: Check Python 32-bit on Windows
