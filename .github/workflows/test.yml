@@ -12,6 +12,7 @@ jobs:
           ref: deprecation_win32
 
       - name: Install Python 32-bit interpreter
+        uses: actions/setup-python@v4
         with:
           python-version: '3.10'
           architecture: 'x86'
